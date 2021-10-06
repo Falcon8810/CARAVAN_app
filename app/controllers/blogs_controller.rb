@@ -20,7 +20,7 @@ class BlogsController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
     @blog = Blog.find(params[:id])
   end
@@ -30,7 +30,7 @@ class BlogsController < ApplicationController
     blog.update(blog_params)
     redirect_to blog_path(blog.id)
   end
-  
+
   def destroy
     blog = Blog.find(params[:id])
     blog.destroy
